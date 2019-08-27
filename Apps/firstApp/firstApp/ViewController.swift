@@ -15,7 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var res: UILabel!
  
     
+    @IBAction func btn2(_ sender: UIButton) {
+        
+    }
     @IBAction func btnAceptar(_ sender: UIButton) {
+        let colors = ["azul","xdxdxd","11111","2222"]
+        let primercolor = colors.first
+        print("\(primercolor!)")
         
         let number1 :String? = numberOne.text
         let number2 :String? = numerTwo2.text
@@ -41,7 +47,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    func numeroMayor( n1 : Int = 0, n2: Int = 0       ) -> Int {
+        return n1 > n2 ? n1: n2
+    }
 
 }
 
