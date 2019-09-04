@@ -39,6 +39,7 @@ class ViewController: UIViewController {
             print("peso = \(peso)")
             print("altura = \(altura)")
             lblResultado.text = "Tu imc es de \(IMC)"
+           // showMessage(titulo: "Indice de masa corporal", message: "Tu indice de masa corporal es de \(IMC)")
         }
         
     }
@@ -46,6 +47,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }}
+    }
+    
+    func showMessage(titulo : String, message : String){ let alert = UIAlertController(title: titulo, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true,completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueIMC"){
+            let segueImc = segue.destination as! ViewControllerImc
+            segueImc.imc = IMC
+        }
+        
+    }
+}
 
 

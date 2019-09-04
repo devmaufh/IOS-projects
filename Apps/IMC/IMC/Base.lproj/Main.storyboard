@@ -57,20 +57,21 @@
                                 <state key="normal" title="Calcular IMC"/>
                                 <connections>
                                     <action selector="btnCalcular:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNU-hZ-HuB"/>
+                                    <segue destination="ouI-yQ-dxW" kind="show" identifier="segueIMC" id="Clp-kN-vgj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9g-WM-NCC">
                                 <rect key="frame" x="184" y="346" width="39" height="30"/>
                                 <state key="normal" title="verde"/>
                                 <connections>
-                                    <segue destination="Nah-PC-QT1" kind="show" id="rst-Bc-AhB"/>
+                                    <segue destination="Nah-PC-QT1" kind="show" identifier="segueVerde" id="rst-Bc-AhB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCl-QU-nlz">
                                 <rect key="frame" x="188" y="384" width="30" height="34"/>
                                 <state key="normal" title="rojo"/>
                                 <connections>
-                                    <segue destination="h6n-I2-Mgu" kind="show" id="TVe-Xa-kqK"/>
+                                    <segue destination="h6n-I2-Mgu" kind="show" identifier="segueRojo" id="TVe-Xa-kqK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa tu Peso en KG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJF-oR-cZS">
@@ -117,6 +118,38 @@
             </objects>
             <point key="canvasLocation" x="-82.400000000000006" y="133.5832083958021"/>
         </scene>
+        <!--View Controller Imc-->
+        <scene sceneID="g3e-ZF-bWa">
+            <objects>
+                <viewController id="ouI-yQ-dxW" customClass="ViewControllerImc" customModule="IMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4jA-M4-17J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ka-Pb-fYV">
+                                <rect key="frame" x="68" y="110" width="275" height="403"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yws-YO-ArR" firstAttribute="bottom" secondItem="4ka-Pb-fYV" secondAttribute="bottom" constant="100" id="6dl-M8-S7u"/>
+                            <constraint firstItem="4ka-Pb-fYV" firstAttribute="top" secondItem="yws-YO-ArR" secondAttribute="top" constant="100" id="DcT-3o-WEy"/>
+                            <constraint firstItem="4ka-Pb-fYV" firstAttribute="leading" secondItem="yws-YO-ArR" secondAttribute="leading" constant="50" id="wkG-6S-Rdj"/>
+                            <constraint firstItem="yws-YO-ArR" firstAttribute="trailing" secondItem="4ka-Pb-fYV" secondAttribute="trailing" constant="50" id="xNn-4l-GHd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yws-YO-ArR"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblImc" destination="4ka-Pb-fYV" id="25S-wz-3U2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6N-GU-hLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="-149"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="UlV-rI-Jrh">
             <objects>
@@ -130,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6M-29-lEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="-134"/>
+            <point key="canvasLocation" x="705" y="-1579"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qe2-SW-eYI">
